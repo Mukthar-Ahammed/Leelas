@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "cart": "Cart",
+    "account": "Account",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "admin": "Admin"
+  },
+  "home": {
+    "hero": {
+      "title": "Pure Kerala Spices, Delivered to Your Door",
+      "subtitle": "Authentic homemade spices crafted with love — straight from Kerala's finest kitchens",
+      "cta": "Shop Now"
+    },
+    "featured": "Featured Products",
+    "categories": "Shop by Category",
+    "whyUs": "Why Choose Leelas?",
+    "natural": "100% Natural",
+    "naturalDesc": "No artificial colours, preservatives, or additives",
+    "handmade": "Handmade with Love",
+    "handmadeDesc": "Every batch crafted fresh in small quantities",
+    "keralaDeli": "Kerala-Only Delivery",
+    "keralaDeliDesc": "Serving fresh across all Kerala districts"
+  },
+  "products": {
+    "title": "All Products",
+    "filter": "Filter",
+    "sortBy": "Sort by",
+    "newest": "Newest",
+    "priceLow": "Price: Low to High",
+    "priceHigh": "Price: High to Low",
+    "inStock": "In Stock Only",
+    "noProducts": "No products found",
+    "addToCart": "Add to Cart",
+    "addedToCart": "Added to Cart",
+    "outOfStock": "Out of Stock",
+    "selectVariant": "Select Weight",
+    "ingredients": "Ingredients",
+    "usageSuggestions": "How to Use",
+    "reviews": "Customer Reviews",
+    "writeReview": "Write a Review"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "quantity": "Qty",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "gst": "GST (5%)",
+    "discount": "Discount",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "coupon": "Apply Coupon",
+    "couponPlaceholder": "Enter coupon code",
+    "apply": "Apply",
+    "couponApplied": "Coupon applied!",
+    "couponInvalid": "Invalid or expired coupon"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shippingAddress": "Shipping Address",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "addressLine1": "Address Line 1",
+    "addressLine2": "Address Line 2 (optional)",
+    "city": "City",
+    "district": "District",
+    "state": "State",
+    "pincode": "Pincode",
+    "paymentMethod": "Payment Method",
+    "cod": "Cash on Delivery",
+    "online": "Pay Online (Razorpay)",
+    "placeOrder": "Place Order",
+    "orderSummary": "Order Summary",
+    "keralaOnly": "We currently deliver only within Kerala",
+    "processing": "Processing your order..."
+  },
+  "orders": {
+    "title": "My Orders",
+    "orderId": "Order ID",
+    "date": "Date",
+    "status": "Status",
+    "total": "Total",
+    "viewDetails": "View Details",
+    "noOrders": "No orders yet",
+    "trackOrder": "Track Order",
+    "requestReturn": "Request Return"
+  },
+  "account": {
+    "title": "My Account",
+    "profile": "Profile",
+    "orders": "Orders",
+    "wishlist": "Wishlist",
+    "returns": "Returns",
+    "editProfile": "Edit Profile",
+    "changePassword": "Change Password",
+    "referralCode": "My Referral Code",
+    "wishlistEmpty": "Your wishlist is empty",
+    "returnsEmpty": "No return requests"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your Leelas account",
+      "email": "Email Address",
+      "password": "Password",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot Password?",
+      "noAccount": "Don't have an account?",
+      "register": "Register"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join the Leelas family",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "password": "Password",
+      "referralCode": "Referral Code (optional)",
+      "submit": "Create Account",
+      "haveAccount": "Already have an account?",
+      "login": "Sign In"
+    },
+    "forgotPassword": {
+      "title": "Forgot Password",
+      "subtitle": "Enter your email to receive a reset link",
+      "email": "Email Address",
+      "submit": "Send Reset Link",
+      "backToLogin": "Back to Sign In",
+      "sent": "Reset link sent! Check your email."
+    },
+    "resetPassword": {
+      "title": "Reset Password",
+      "password": "New Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Reset Password",
+      "success": "Password reset successfully"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Dashboard",
+      "totalOrders": "Total Orders",
+      "revenue": "Revenue",
+      "customers": "Customers",
+      "pendingOrders": "Pending Orders"
+    },
+    "products": "Products",
+    "orders": "Orders",
+    "users": "Users",
+    "discounts": "Discounts",
+    "returns": "Returns",
+    "addProduct": "Add Product",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product",
+    "approve": "Approve",
+    "reject": "Reject"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "serverError": "Something went wrong",
+    "unauthorized": "You are not authorized to view this page",
+    "sessionExpired": "Your session has expired. Please sign in again.",
+    "invalidCredentials": "Invalid email or password",
+    "emailTaken": "An account with this email already exists",
+    "outOfStock": "This item is out of stock"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "confirm": "Confirm",
+    "close": "Close",
+    "currency": "₹",
+    "paise": 100
+  }
+}

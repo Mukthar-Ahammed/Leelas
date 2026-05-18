@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: 2rem;
+  --radius-4xl: 2.5rem;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-saffron: var(--saffron);
+  --color-mint: var(--mint);
+  --color-terracotta: var(--terracotta);
+  --color-sky-soft: var(--sky-soft);
+
+  /* legacy compat */
+  --color-brand: var(--primary);
+  --color-brand-foreground: var(--primary-foreground);
+  --color-action: var(--action);
+  --color-action-foreground: var(--action-foreground);
+  --color-action-hover: var(--action-hover);
+  --color-yellow-cta: var(--saffron);
+  --color-tile: var(--card);
+  --color-badge: var(--badge);
+
+  /* Animation tokens */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ── Kerala Botanical Design System ───────────────────────────────────────── */
+:root {
+  --radius: 1rem;
+
+  --background: oklch(0.987 0.010 85);
+  --foreground: oklch(0.18 0.055 153);
+
+  --card: oklch(0.972 0.014 82);
+  --card-foreground: oklch(0.18 0.055 153);
+
+  --popover: oklch(0.995 0.004 80);
+  --popover-foreground: oklch(0.18 0.055 153);
+
+  --primary: oklch(0.26 0.072 153);
+  --primary-foreground: oklch(0.985 0.008 85);
+  --primary-glow: oklch(0.50 0.13 148);
+
+  --secondary: oklch(0.95 0.02 85);
+  --secondary-foreground: oklch(0.24 0.065 152);
+
+  --muted: oklch(0.958 0.013 82);
+  --muted-foreground: oklch(0.52 0.042 155);
+
+  --accent: oklch(0.922 0.036 150);
+  --accent-foreground: oklch(0.26 0.072 153);
+
+  --destructive: oklch(0.60 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --border: oklch(0.906 0.016 82);
+  --input: oklch(0.935 0.015 82);
+  --ring: oklch(0.60 0.17 135);
+  --surface: oklch(0.978 0.01 82);
+
+  --saffron: oklch(0.795 0.138 78);
+  --mint: oklch(0.880 0.088 155);
+  --terracotta: oklch(0.625 0.118 38);
+  --sky-soft: oklch(0.940 0.038 230);
+
+  /* legacy */
+  --brand: oklch(0.26 0.072 153);
+  --brand-foreground: oklch(0.985 0.008 85);
+  --action: oklch(0.77 0.19 132);
+  --action-foreground: oklch(0.20 0.07 150);
+  --action-hover: oklch(0.73 0.18 132);
+  --badge: oklch(0.22 0.065 152);
+  --peach-from: oklch(0.78 0.10 50);
+  --peach-to: oklch(0.88 0.06 60);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer utilities {
+  .price-cents {
+    font-size: 0.55em;
+    vertical-align: top;
+    line-height: 1;
+    margin-left: 1px;
+    font-weight: 600;
+  }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { scrollbar-width: none; }
+
+  .shadow-card {
+    box-shadow: 0 8px 32px -8px oklch(0.18 0.055 153 / 0.09),
+                0 1px 2px oklch(0.18 0.055 153 / 0.06);
+  }
+  .shadow-xl-soft {
+    box-shadow: 0 24px 64px -12px oklch(0.18 0.055 153 / 0.13),
+                0 2px 4px oklch(0.18 0.055 153 / 0.06);
+  }
+  .shadow-diffuse {
+    box-shadow: 0 20px 40px -15px oklch(0.18 0.055 153 / 0.08);
+  }
+
+  .font-serif { font-family: var(--font-serif); }
+
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+    will-change: transform;
+  }
+  .animate-marquee-fast {
+    animation: marquee 16s linear infinite;
+    will-change: transform;
+  }
+  .animate-fade-up {
+    animation: fade-up 0.6s var(--ease-spring) both;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s var(--ease-out-quart) both;
+  }
+
+  /* Spotlight card — border illuminates under cursor */
+  .spotlight-card {
+    position: relative;
+    isolation: isolate;
+  }
+  .spotlight-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: radial-gradient(
+      280px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      oklch(0.26 0.072 153 / 0.12),
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .spotlight-card:hover::before { opacity: 1; }
+  .spotlight-card > * { position: relative; z-index: 1; }
+
+  /* Glassmorphism with refraction edge */
+  .glass-panel {
+    background: oklch(0.99 0.005 80 / 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid oklch(1 0 0 / 0.35);
+    box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.18),
+                0 20px 48px -12px oklch(0.18 0.055 153 / 0.18);
+  }
+}

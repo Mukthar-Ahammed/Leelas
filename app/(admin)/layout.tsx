@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+import AdminSidebar from "./AdminSidebar";
 
 export default async function AdminLayout({ children }: { children: ReactNode }) {
   const session = await auth();
@@ -9,32 +11,45 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   }
 
   return (
-    <div className="min-h-screen flex">
-      <aside className="w-64 border-r bg-muted/30 flex flex-col">
-        <div className="p-6 border-b">
-          <a href="/" className="text-xl font-bold text-orange-700">Leelas</a>
-          <p className="text-xs text-muted-foreground mt-1">Admin Panel</p>
+    <div className="min-h-screen flex bg-[#f3f4f8]">
+      {/* ── Sidebar ─────────────────────────────────────────── */}
+      <aside className="w-64 flex-shrink-0 flex flex-col bg-white border-r border-slate-100 shadow-[2px_0_12px_rgba(0,0,0,0.03)]">
+
+        {/* Logo */}
+        <div className="px-6 py-5 border-b border-slate-100">
+          <a href="/" className="flex items-center">
+            <Image
+              src="/logo/leelas-logo.png"
+              alt="Leelas Spices"
+              width={180}
+              height={72}
+              className="object-contain h-16 w-auto"
+              priority
+            />
+          </a>
+          <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-2 pl-0.5">
+            Admin Panel
+          </p>
         </div>
-        <nav className="flex-1 p-4 space-y-1">
-          {[
-            { href: "/admin/dashboard", label: "Dashboard" },
-            { href: "/admin/products", label: "Products" },
-            { href: "/admin/categories", label: "Categories" },
-            { href: "/admin/orders", label: "Orders" },
-            { href: "/admin/users", label: "Users" },
-            { href: "/admin/returns", label: "Returns" },
-            { href: "/admin/audit-log", label: "Audit Log" },
-          ].map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="block px-4 py-2 rounded-lg text-sm hover:bg-orange-50 hover:text-orange-700 transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+
+        {/* Nav — client component to avoid serialising icon refs */}
+        <AdminSidebar />
+
+        {/* Footer */}
+        <div className="p-4 border-t border-slate-100">
+          <a
+            href="/"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-[13px] font-bold text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            View Store
+          </a>
+        </div>
       </aside>
+
+      {/* ── Main ────────────────────────────────────────────── */}
       <main className="flex-1 overflow-auto">
         <div className="p-8">{children}</div>
       </main>
